@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+  
+    {% for book in books %}
+         <ul><a href="{% url 'book' book.id %}">{{book.name}}</a></ul> 
+    {% empty %}
+        No books found
+    {% endfor %}
+ 
+</ul>
+</body>
+</html>
+
+
